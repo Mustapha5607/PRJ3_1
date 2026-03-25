@@ -1,43 +1,24 @@
-Markdown
-# Système d'Envoi d'Emails (Branche: mail)
+📧 Module de Gestion des Emails
+Projet : PRJ3_1 | Branche : mail
+Ce module centralise toute la logique d'envoi de courriels automatique pour l'application. Il a été conçu pour offrir une alternative fiable et sécurisée à l'envoi d'emails standard.
 
-Ce module permet d'intégrer une fonctionnalité d'envoi d'emails robuste au sein du projet **PRJ3_1**, en remplaçant la fonction native `mail()` de PHP par la bibliothèque **PHPMailer**.
+🛠️ Composants Principaux
+Le système repose sur deux piliers majeurs situés dans le dossier /includes :
 
-##  Fonctionnalités
-* **Support SMTP :** Envoi d'emails via des serveurs externes (Gmail, Outlook, Mailtrap, etc.).
-* **Sécurité :** Support du chiffrement TLS/SSL.
-* **Formatage :** Gestion native des emails au format HTML et des pièces jointes.
-* **Fiabilité :** Gestion des erreurs et logs d'envoi.
+Moteur d'envoi (PHPMailer) : Intégration d'une bibliothèque professionnelle pour garantir que les messages arrivent en boîte de réception et non en spams.
 
-##  Structure du module
-Le code est organisé dans le dossier `includes/` :
-* `includes/PHPMailer/` : Fichiers sources de la bibliothèque.
-* `includes/mail.php` : Script de configuration principal où sont définis les paramètres du serveur.
+Script de Configuration (mail.php) : Le point central qui gère la connexion au serveur de messagerie (SMTP).
 
-##  Configuration
-Pour activer l'envoi, modifiez les variables suivantes dans `includes/mail.php` :
+✨ Fonctionnalités Clés
+Authentification Sécurisée : Support des protocoles de sécurité modernes pour protéger les identifiants d'envoi.
 
-```php
-$mail->Host       = 'votre_serveur_smtp'; 
-$mail->SMTPAuth   = true;
-$mail->Username   = 'votre_email@exemple.com';
-$mail->Password   = 'votre_mot_de_passe';
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port       = 587;
-[!IMPORTANT]
-Ne poussez jamais vos identifiants réels (mots de passe) sur un dépôt public. Utilisez des variables d'environnement ou ignorez le fichier de config.
+Formatage Riche : Capacité d'envoyer des emails personnalisés avec du texte mis en forme (HTML).
 
-🛠 Utilisation
-Pour envoyer un mail depuis un autre script (ex: dans admin/), utilisez l'importation suivante :
+Polyvalence : Utilisable partout dans le projet, que ce soit pour les notifications d'administration ou les confirmations clients.
 
-PHP
-require_once '../includes/mail.php';
-// Appelez ensuite votre fonction d'envoi personnalisée
- État du développement
-[x] Intégration de PHPMailer.
+📖 Guide d'Installation Rapide
+Vérification : S'assurer que le dossier PHPMailer est bien présent dans /includes.
 
-[x] Création du script de base mail.php.
+Paramétrage : Renseigner les informations de votre fournisseur mail (Hôte, Port, Identifiants) dans le fichier de configuration.
 
-[ ] Liaison avec le formulaire de contact/réservation.
-
-[ ] Test de réception sur différentes boîtes mail.
+Déploiement : Appeler le module dans les pages souhaitées (ex: formulaires de contact ou gestion des réservations).
