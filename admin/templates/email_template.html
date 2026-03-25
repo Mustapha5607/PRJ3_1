@@ -5,42 +5,48 @@
     <title>Confirmation de réservation - IT Beauty</title>
 </head>
 <body style="margin:0; padding:0; background:#f6f9fc; font-family: 'Poppins', Arial, sans-serif;">
-    <div style="max-width: 600px; margin: 20px auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+
+    <!-- Bannière élégante -->
+    <div style="background: linear-gradient(135deg, #1e3a5f, #142b47); padding: 18px 25px; text-align: center;">
+        <img src="https://i.ibb.co/zHs77nXv/logoit.png" 
+             alt="IT Beauty" 
+             style="max-width: 135px; height: auto; margin-bottom: 6px;">
         
-        <!-- Header avec logo -->
-        <div style="background: #1e3a5f; padding: 25px; text-align: center;">
-            <img src="https://ton-domaine.fr/logo.png" alt="IT Beauty" style="max-width: 180px; height: auto;">
-            <h1 style="color: white; margin: 15px 0 0; font-size: 28px; font-family: 'Playfair Display', serif;">IT Beauty</h1>
-        </div>
+        <h1 style="color: #ffffff; margin: 0; font-size: 23px; font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+            IT Beauty
+        </h1>
+    </div>
+
+    <div style="max-width: 600px; margin: 25px auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
         
-        <div style="padding: 40px 30px; color: #142b47;">
-            <h2 style="color: #1e3a5f; margin-bottom: 25px;">✅ Confirmation de votre réservation</h2>
+        <div style="padding: 35px 30px;">
+            <h2 style="color: #1e3a5f; margin: 0 0 25px; text-align: center;">✅ Confirmation de votre réservation</h2>
             
             <p style="font-size: 17px; line-height: 1.6;">Bonjour <strong>{{nom_client}}</strong>,</p>
             
             <p style="font-size: 16px;">Nous avons bien enregistré votre rendez-vous :</p>
             
-            <div style="background: #f6f9fc; border-left: 5px solid #4da8b0; padding: 20px; margin: 25px 0; border-radius: 6px;">
+            <div style="background: #f6f9fc; border-left: 5px solid #4da8b0; padding: 18px; margin: 25px 0; border-radius: 6px;">
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Service :</strong> {{service}}</li>
-                    <li style="margin-bottom: 12px;"><strong>Date :</strong> {{date_rdv}}</li>
-                    <li style="margin-bottom: 12px;"><strong>Heure :</strong> {{heure_rdv}}</li>
-                    <!-- Tu pourras ajouter plus tard : prix, durée, coiffeur, adresse complète, etc. -->
+                    <li style="margin-bottom: 10px;"><strong>Service :</strong> {{service}}</li>
+                    <li style="margin-bottom: 10px;"><strong>Date :</strong> {{date_rdv}}</li>
+                    <li style="margin-bottom: 10px;"><strong>Heure :</strong> {{heure_rdv}}</li>
                 </ul>
             </div>
             
-            <p style="font-size: 16px; line-height: 1.6;">Nous vous attendons avec plaisir dans notre salon au <strong>12 rue de la Beauté, 75011 Paris</strong>.</p>
+            <p style="font-size: 16px;">Nous vous attendons avec plaisir au <strong>12 rue de la Beauté, 75011 Paris</strong>.</p>
             
-            <p style="margin-top: 30px;">À très bientôt,<br>
+            <p style="margin-top: 35px; text-align: center;">À très bientôt,<br>
             <strong>L'équipe IT Beauty</strong></p>
         </div>
-        
-        <div style="background: #f6f9fc; padding: 20px; text-align: center; font-size: 13px; color: #5c7889;">
-            <p>IT Beauty – Coiffure & Couleur à Paris 11ᵉ<br>
-            📍 12 rue de la Beauté, 75011 Paris<br>
-            📞 01 23 45 67 89 | ✉ contact@itbeauty.fr</p>
-            <p style="margin-top: 15px;">Cet email est automatique. Merci de ne pas y répondre.</p>
-        </div>
     </div>
+
+    <!-- Footer avec ton email -->
+    <div style="text-align: center; padding: 20px; font-size: 12px; color: #5c7889;">
+        IT Beauty – Coiffure & Couleur à Paris 11ᵉ<br>
+        📍 12 rue de la Beauté, 75011 Paris<br>
+        📞 01 23 45 67 89 | ✉ yacine.antitene@gmail.com
+    </div>
+
 </body>
 </html>
